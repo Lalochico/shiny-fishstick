@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta y Renta de Propiedades</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <h1>Encuentra tu hogar ideal</h1>
+        <input type="text" id="busqueda" placeholder="Buscar por ciudad o precio..." onkeyup="filtrarPropiedades()">
+    </header>
+    
+    <section id="propiedades">
+        <div class="propiedad" data-ciudad="Ciudad de México" data-precio="500" data-lat="19.4326" data-lng="-99.1332">
+            <img src="https://via.placeholder.com/300" alt="Departamento en CDMX">
+            <h2>Departamento en Ciudad de México</h2>
+            <p>Precio: $500/mes</p>
+            <button onclick="mostrarMapa(19.4326, -99.1332)">Ver ubicación</button>
+        </div>
+
+        <div class="propiedad" data-ciudad="Guadalajara" data-precio="700" data-lat="20.6597" data-lng="-103.3496">
+            <img src="https://via.placeholder.com/300" alt="Casa en Guadalajara">
+            <h2>Casa en Guadalajara</h2>
+            <p>Precio: $700/mes</p>
+            <button onclick="mostrarMapa(20.6597, -103.3496)">Ver ubicación</button>
+        </div>
+    </section>
+
+    <div id="mapa"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
